@@ -55,6 +55,9 @@ $(function(){
       case "etc":
         $("#etc-edit").show();
         break;
+      case "update":
+        $("#update-history").show();
+        break;
     }
   })
 })
