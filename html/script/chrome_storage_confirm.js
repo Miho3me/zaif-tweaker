@@ -10,10 +10,10 @@ $(function(){
       $(".span_normal_total_price").show();
     }
   }),
-  chrome.storage.local.get(["user_color_set"],function(value){
-    if(value.user_color_set == "on"){
+  chrome.storage.local.get(["user_color"],function(value){
+    if(value.user_color == "on"){
       let user_color = "on";
-    }else if (value.user_color_set == "of") {
+    }else if (value.user_color == "of") {
       let user_color = "off";
     }
   })

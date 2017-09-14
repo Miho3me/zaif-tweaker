@@ -46,11 +46,11 @@ $(function(){
         break;
       case "user_color":
         if($("#user_color").is(":checked")){
-          chrome.storage.local.set({"user_color_set":"on"},function(){
+          chrome.storage.local.set({"user_color":"on"},function(){
             console.log("ユーザーカラーを有効化")
           })
         }else{
-          chrome.storage.local.set({"user_color_set":"off"},function(){
+          chrome.storage.local.set({"user_color":"off"},function(){
             console.log("ユーザーカラーを無効化")
           })
         }
