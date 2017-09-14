@@ -1,5 +1,3 @@
-let let_chat_edit = ["chat_hide"]
-
 $(function(){
   //ここからチェックボックスの状態チェック
   chrome.storage.local.get(["chat_hide"],function(value){
@@ -10,6 +8,11 @@ $(function(){
   chrome.storage.local.get(["jika_hide"],function(value){
     if(value.jika_hide == "on"){
       $("#jika_hide").prop("checked",true);
+    }
+  }),
+  chrome.storage.local.get(["user_color"],function(value){
+    if(value.user_color == "on"){
+      $("#user_color").prop("checked",true);
     }
   }),
   //ここまで
@@ -33,14 +36,24 @@ $(function(){
       case "jika_hide":
         if($("#jika_hide").is(":checked")){
           chrome.storage.local.set({"jika_hide": "on"},function(){
-            console.log(click_checkbox_id+"をshow()")
+            console.log("時価総額を非表示")
           })
         }else{
           chrome.storage.local.set({"jika_hide": "off"},function(){
-            console.log(click_checkbox_id+"をshow()")
+            console.log("時価総額を表示")
           })
         }
         break;
+      case "user_color":
+        if($("#user_color").is(":checked")){
+          chrome.storage.local.set({"user_color_set":"on"},function(){
+            console.log("ユーザーカラーを有効化")
+          })
+        }else{
+          chrome.storage.local.set({"user_color_set":"off"},function(){
+            console.log("ユーザーカラーを無効化")
+          })
+        }
     }
   }),
   $(".switch-case-btn").click(function(){

@@ -12,11 +12,13 @@
       <button class="switch-case-btn" id="chat">チャット</button>
       <button class="switch-case-btn" id="etc">その他</button>
       <button class="switch-case-btn" id="update">アップデート履歴</button>
+      <button class="switch-case-btn" id="screenshot">スクリーンショット用</button>
     </div>
     <div id="edit-display">
       <div class="edit-display-hide" id="chat-edit">
         <ul>
           <li><input class="checkbox" type="checkbox" id="chat_hide">チャットボックスを丸ごと消し去る</li>
+          <li><input class="checkbox" type="checkbox" id="user_color">ユーザーごとに色をつける</li>
         </ul>
       </div>
       <div class="edit-display-hide" id="etc-edit">
@@ -35,6 +37,7 @@
       </ul>
     </div>
   </div>
+  <script src="./script/chrome_storage_confirm.js"></script>
   <script src="./script/popup.js"></script>
 </body>
 </html>
