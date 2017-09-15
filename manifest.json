@@ -2,7 +2,7 @@
   "manifest_version":2,
   "name":"Zaif-Tweaker",
   "description":"痒い所に手が届くような拡張機能",
-  "version":"0.0.3",
+  "version":"0.0.4",
   "icons":{
     "16":"icons/icon16.png",
     "48":"icons/icon48.png"
@@ -17,7 +17,7 @@
   },
   "content_scripts":[
     {
-    "matches":["https://zaif.jp/*"],
+    "matches": ["https://zaif.jp/trade*","https://zaif.jp/token*","https://zaif.jp/event/mijinmagatama/trade/*"],
     "css":["html/css/popup.css"],
     "js":[
       "html/script/jquery-3.2.1.min.js",
