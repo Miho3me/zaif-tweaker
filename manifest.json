@@ -18,7 +18,7 @@
   "content_scripts":[
     {
     "matches": ["https://zaif.jp/trade*","https://zaif.jp/token*","https://zaif.jp/event/mijinmagatama/trade/*"],
-    "css":["html/css/popup.css"],
+    "css":["html/css/content.css"],
     "js":[
       "html/script/jquery-3.2.1.min.js",
       "html/script/chrome_storage_confirm.js",

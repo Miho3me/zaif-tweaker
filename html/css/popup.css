@@ -1,6 +1,9 @@
 body{
   width:450px;
 }
-.span_normal_total_price,.edit-display-hide{
+.edit-display-hide{
   display: none;
+}
+label, input[type='checkbox'] {
+    cursor: pointer;
 }
