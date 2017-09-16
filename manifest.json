@@ -22,7 +22,7 @@
     "js":[
       "html/script/jquery-3.2.1.min.js",
       "html/script/chrome_storage_confirm.js",
-      "html/script/script.js"
+      "html/script/content.js"
     ],
     "run_at":"document_end"
     }
