@@ -1,5 +1,5 @@
 let processing_zt = "off"
-let set_color = "";
+let set_color
 $(function(){
   chrome.storage.local.get(["user_color"],function(value){
     if(value.user_color == "on"){
