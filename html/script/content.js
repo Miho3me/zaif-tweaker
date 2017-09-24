@@ -61,5 +61,12 @@ $(function(){
       })
 
     }
+  }),
+  chrome.storage.local.get(["scsho"],function(value){
+    if(value.scsho == "on"){
+      $("#page__base__pcviews__user_email,.span_normal_item,.span_normal_aux,.span_normal_total_price").empty();
+      $("#page__base__pcviews__user_email").append('<span class="glyphicon glyphicon-user">[個人情報は見せられないよ！]</span>');
+      $(".span_normal_item").prepend('[資産状況も見せられないよ！]')
+    }
   })
 })

@@ -15,6 +15,11 @@ $(function(){
       $("#user_color").prop("checked",true);
     }
   }),
+  chrome.storage.local.get(["privacy_hide"],function(value){
+    if(value.privacy_hide == "on"){
+      $("#privacy_hide").prop("checked",true);
+    }
+  }),
   //ここまで
   $(".checkbox").click(function(){
     let click_checkbox_id = $(this).attr("id");
@@ -54,6 +59,17 @@ $(function(){
             console.log("ユーザーカラーを無効化")
           })
         }
+      case "privacy_hide":
+        if($("#privacy_hide").is(":checked")){
+          chrome.storage.local.set({"privacy_hide":"on"},function(){
+            console.log("プライバシーモードをオン")
+          })
+        }else{
+          chrome.storage.local.set({"privacy_hide":"off"},function(){
+            console.log("プライバシーモードをオフ")
+          })
+        }
+        break;
     }
   }),
   $(".switch-case-btn").click(function(){
@@ -70,6 +86,9 @@ $(function(){
         break;
       case "update":
         $("#update-history").show();
+        break;
+      case "screenshot":
+        $("#scsho-edit").show();
         break;
     }
   })
