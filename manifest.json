@@ -2,7 +2,7 @@
   "manifest_version":2,
   "name":"Zaif-Tweaker",
   "description":"痒い所に手が届くような拡張機能",
-  "version":"0.0.5",
+  "version":"0.0.6",
   "icons":{
     "16":"icons/icon16.png",
     "48":"icons/icon48.png"
